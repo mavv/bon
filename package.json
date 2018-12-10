@@ -25,10 +25,12 @@
     },
     "husky": {
         "hooks": {
-            "precommit": "lint-staged && npm run validate"
+            "precommit": "lint-staged && npm run validate",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
     },
     "devDependencies": {
+        "@commitlint/cli": "^7.2.1",
         "eslint": "^5.10.0",
         "eslint-config-prettier": "^3.3.0",
         "husky": "^1.2.0",
