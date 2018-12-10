@@ -1,0 +1,22 @@
+{
+    "name": "bon",
+    "version": "1.0.0",
+    "description": "building blocks",
+    "main": "index.js",
+    "repository": "https://github.com/mavv/bon.git",
+    "author": "Lucian <sickmav@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "lint": "./node_modules/.bin/estlint src",
+        "prettier": "./node_modules/.bin/prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\"",
+        "format": "npm run prettier -- --write",
+        "validate": "npm run lint && npm run prettier ~ --list-different",
+        "precommit": "npm run validate"
+    },
+    "devDependencies": {
+        "eslint": "^5.10.0",
+        "eslint-config-prettier": "^3.3.0",
+        "husky": "^1.2.0",
+        "prettier": "^1.15.3"
+    }
+}
