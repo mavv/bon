@@ -10,7 +10,14 @@
         "lint": "./node_modules/.bin/estlint src",
         "prettier": "./node_modules/.bin/prettier \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|graphql|mdx)\"",
         "format": "npm run prettier -- --write",
-        "validate": "npm run lint && npm run prettier ~ --list-different"
+        "validate": "npm run lint && npm run prettier ~ --list-different",
+        "clean": "rm -rf ./dist",
+        "start": "webpack-dev-server --hot --mode development"
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-env"
+        ]
     },
     "lint-staged": {
         "linters": {
@@ -30,11 +37,26 @@
         }
     },
     "devDependencies": {
+        "@babel/core": "^7.2.0",
+        "@babel/preset-env": "^7.2.0",
         "@commitlint/cli": "^7.2.1",
+        "babel-loader": "^8.0.4",
+        "css-loader": "^2.0.0",
         "eslint": "^5.10.0",
         "eslint-config-prettier": "^3.3.0",
+        "html-webpack-plugin": "^3.2.0",
+        "html-webpack-template": "^6.2.0",
         "husky": "^1.2.0",
         "lint-staged": "^8.1.0",
-        "prettier": "^1.15.3"
+        "prettier": "^1.15.3",
+        "style-loader": "^0.23.1",
+        "webpack": "^4.27.1",
+        "webpack-cli": "^3.1.2",
+        "webpack-dev-server": "^3.1.10"
+    },
+    "dependencies": {
+        "fullcalendar": "^3.9.0",
+        "jquery": "^3.3.1",
+        "moment": "^2.22.2"
     }
 }
