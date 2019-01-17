@@ -3,7 +3,9 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = {
-    entry: './src/index.js',
+    entry:
+        // './src/cringyIndex.js',
+        './src/index.js',
     devtool: 'sourcemap',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -12,7 +14,7 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+            f    test: /\.(js|jsx)$/,
                 use: 'babel-loader',
                 exclude: /node_modules/,
             },
@@ -23,7 +25,7 @@ const config = {
         ],
     },
     resolve: {
-        extensions: ['.js'],
+        extensions: ['.js', '.jsx'],
     },
     devServer: {
         contentBase: './dist',

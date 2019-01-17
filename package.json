@@ -16,7 +16,8 @@
     },
     "babel": {
         "presets": [
-            "@babel/preset-env"
+            "@babel/preset-env",
+            "@babel/preset-react"
         ]
     },
     "lint-staged": {
@@ -39,16 +40,19 @@
     "devDependencies": {
         "@babel/core": "^7.2.0",
         "@babel/preset-env": "^7.2.0",
+        "@babel/preset-react": "^7.0.0",
         "@commitlint/cli": "^7.2.1",
         "babel-loader": "^8.0.4",
         "css-loader": "^2.0.0",
         "eslint": "^5.10.0",
         "eslint-config-prettier": "^3.3.0",
+        "fullcalendar-scheduler": "^1.9.4",
         "html-webpack-plugin": "^3.2.0",
         "html-webpack-template": "^6.2.0",
         "husky": "^1.2.0",
         "lint-staged": "^8.1.0",
         "prettier": "^1.15.3",
+        "react-hot-loader": "^4.3.12",
         "style-loader": "^0.23.1",
         "webpack": "^4.27.1",
         "webpack-cli": "^3.1.2",
@@ -56,7 +60,11 @@
     },
     "dependencies": {
         "fullcalendar": "^3.9.0",
+        "fullcalendar-reactwrapper": "^1.0.7",
+        "googleapis": "27",
         "jquery": "^3.3.1",
-        "moment": "^2.22.2"
+        "moment": "^2.22.2",
+        "react": "^16.6.3",
+        "react-dom": "^16.6.3"
     }
 }
