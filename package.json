@@ -12,7 +12,8 @@
         "format": "npm run prettier -- --write",
         "validate": "npm run lint && npm run prettier ~ --list-different",
         "clean": "rm -rf ./dist",
-        "start": "webpack-dev-server --hot --mode development"
+        "build:dev": "npx webpack --mode=development",
+        "start": "npm run build:dev; webpack-dashboard -- webpack-dev-server --hot --mode development"
     },
     "babel": {
         "presets": [
@@ -57,6 +58,7 @@
         "style-loader": "^0.23.1",
         "webpack": "^4.27.1",
         "webpack-cli": "^3.1.2",
+        "webpack-dashboard": "^2.0.0",
         "webpack-dev-server": "^3.1.10"
     },
     "dependencies": {

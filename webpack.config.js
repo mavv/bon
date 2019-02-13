@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const DashboardPlugin = require('webpack-dashboard/plugin')
 
 const config = {
     entry:
@@ -48,6 +49,7 @@ const config = {
                 // 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js',
             ],
         }),
+        new DashboardPlugin(),
     ],
     optimization: {
         runtimeChunk: 'single',
