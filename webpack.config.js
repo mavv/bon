@@ -32,17 +32,17 @@ const config = {
         contentBase: './dist',
     },
     plugins: [
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-        }),
+        // new webpack.ProvidePlugin({
+        //     $: 'jquery',
+        //     jQuery: 'jquery',
+        // }),
         new HtmlWebpackPlugin({
             template: require('html-webpack-template'), //path.resolve(__dirname, 'src/index.html'),
             inject: false,
             mobile: true,
             lang: 'en-US',
             title: 'cali',
-            appMountId: 'calendar',
+            appMountId: 'react-hooks',
             links: ['https://fonts.googleapis.com/css?family=Roboto'],
             scripts: [
                 // 'https://code.jquery.com/jquery-3.1.0.js',
